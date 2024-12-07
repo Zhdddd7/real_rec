@@ -4,7 +4,12 @@ Real-Rec is a system project designed for a forum recommendation solution, focus
 * Deliver highly relevant, high-quality post recommendations.
 * Provide suitable content feeds when users browse or refresh, and personalized results when they explicitly search.
 * Handle a continuous influx of new users and new posts, ensuring effective "cold start" strategies for both.
-
+## Architecture
+![architecture](./imgs/Architecture.png)
+Here is a current plan of architecture, which will use 
+* FlinkCDC will be used to extract the log increment data from user app.
+* All the previous data and user info will be stored in MySql. 
+* All features will be stored in Redis.
 ## Data Layer
 ### User portrait
 * Basic info
